@@ -1,7 +1,7 @@
 App Name: Dice roll
 
 Description: It's a random number generator application. It's a six sided dice that rolls and generate 
-a number randomly.
+a face of the dice randomly.
 
 Type of app: Android Application
 
