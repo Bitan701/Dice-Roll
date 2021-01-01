@@ -29,4 +29,15 @@
         app:layout_constraintStart_toStartOf="@+id/textResult"
         app:layout_constraintTop_toBottomOf="@+id/textResult" />
 
+    <ImageView
+        android:id="@+id/imageDice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/textResult"
+        app:layout_constraintEnd_toEndOf="@+id/textResult"
+        app:layout_constraintStart_toStartOf="@+id/textResult"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/rolled_one"
+        android:visibility="invisible"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
