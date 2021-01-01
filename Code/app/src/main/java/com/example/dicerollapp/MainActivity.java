@@ -30,33 +30,27 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 randomNumber = random.nextInt(5)+1;
                 textResult.setText(""+randomNumber);
-                if(randomNumber == 1)
-                {
+                if(randomNumber == 1) {
                     imageDice.setImageResource(R.mipmap.rolled_one);
                     imageDice.setVisibility(View.VISIBLE);
                 }
-                if(randomNumber == 2)
-                {
+                if(randomNumber == 2) {
                     imageDice.setImageResource(R.mipmap.rolled_two);
                     imageDice.setVisibility(View.VISIBLE);
                 }
-                if(randomNumber == 3)
-                {
+                if(randomNumber == 3) {
                     imageDice.setImageResource(R.mipmap.rolled_three);
                     imageDice.setVisibility(View.VISIBLE);
                 }
-                if(randomNumber == 4)
-                {
+                if(randomNumber == 4) {
                     imageDice.setImageResource(R.mipmap.rolled_four);
                     imageDice.setVisibility(View.VISIBLE);
                 }
-                if(randomNumber == 5)
-                {
+                if(randomNumber == 5) {
                     imageDice.setImageResource(R.mipmap.rolled_five);
                     imageDice.setVisibility(View.VISIBLE);
                 }
-                if(randomNumber == 6)
-                {
+                if(randomNumber == 6) {
                     imageDice.setImageResource(R.mipmap.rolled_six);
                     imageDice.setVisibility(View.VISIBLE);
                 }
