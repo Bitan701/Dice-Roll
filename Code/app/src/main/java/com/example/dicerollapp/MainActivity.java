@@ -3,6 +3,7 @@ package com.example.dicerollapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -32,11 +33,13 @@ public class MainActivity extends AppCompatActivity {
         TextView textHistory3 = findViewById(R.id.historyTextView3);
         TextView textHistory4 = findViewById(R.id.historyTextView4);
 
+        Button buttonCoinToss = findViewById(R.id.buttonCoinToss);
+
         buttonRoll.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                randomNumber = random.nextInt(5)+1;
+                randomNumber = random.nextInt(6)+1;
                 textResult.setText(""+randomNumber);
                 array[i] = randomNumber;
                 i++;
@@ -72,5 +75,17 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        buttonCoinToss.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openSecondActivity();
+            }
+        });
+    }
+
+    public void openSecondActivity(){
+        Intent intent = new Intent(this, SecondActivity.class);
+        startActivity(intent);
     }
 }

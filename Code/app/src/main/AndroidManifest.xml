@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/rolled_six"
         android:supportsRtl="true"
         android:theme="@style/Theme.DiceRollApp">
+        <activity android:name=".SecondActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
