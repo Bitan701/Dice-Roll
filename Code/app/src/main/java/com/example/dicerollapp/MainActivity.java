@@ -2,6 +2,7 @@ package com.example.dicerollapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
 
     Random random = new Random();
     int randomNumber;
+    int i = 5;
+    int[] array = new int[100];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,13 +26,26 @@ public class MainActivity extends AppCompatActivity {
         TextView textResult = findViewById(R.id.textResult);
         Button buttonRoll = findViewById(R.id.buttonRoll);
         ImageView imageDice = findViewById(R.id.imageDice);
-
+        TextView textHistory = findViewById(R.id.historyTextView);
+        TextView textHistory1 = findViewById(R.id.historyTextView1);
+        TextView textHistory2 = findViewById(R.id.historyTextView2);
+        TextView textHistory3 = findViewById(R.id.historyTextView3);
+        TextView textHistory4 = findViewById(R.id.historyTextView4);
 
         buttonRoll.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 randomNumber = random.nextInt(5)+1;
                 textResult.setText(""+randomNumber);
+                array[i] = randomNumber;
+                i++;
+                textHistory.setText("History");
+                textHistory1.setText(""+array[i-2]);
+                textHistory2.setText(""+array[i-3]);
+                textHistory3.setText(""+array[i-4]);
+                textHistory4.setText(""+array[i-5]);
+
                 if(randomNumber == 1) {
                     imageDice.setImageResource(R.mipmap.rolled_one);
                     imageDice.setVisibility(View.VISIBLE);
